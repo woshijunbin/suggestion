@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+  <data-sources>
+  </data-sources>
+  <form-beans>
+    <!-- 登陆 -->
+    <form-bean name="loginForm" type="Commom.login.ActionForm.InfoForm"/>
+  </form-beans>
+  <global-exceptions>
+ 
+  </global-exceptions>
+  <global-forwards>
+  	<forward name="error" path="/error.jsp" redirect="true"></forward>
+  </global-forwards>
+  <action-mappings>
+    <action path="/index" forward="/WEB-INF/view/index.jsp">
+    </action>
+    <!-- 登陆 -->
+    <action path="/login" name="loginForm" type="Commom.login.Action.InfoAction" scope="request" input="/WEB-INF/view/login.jsp">
+      <forward name="success" path="/index.do"/>
+      <forward name="page" path="/WEB-INF/view/login.jsp"/>
+    </action>
+    <!-- 退出 -->
+    <action path="/quit" type="Commom.login.Action.QuitAction">
+      <forward name="success" path="/WEB-INF/view/login.jsp"/>
+    </action>
+  </action-mappings>
+  <controller/>
+  <plug-in className="Commom.Util.StringToDate"></plug-in>
+</struts-config>

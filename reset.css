@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(195, 67, 67, 0);
+}
+
+body{
+    line-height: 24px;
+    font: 14px Helvetica Neue,Helvetica,PingFang SC,\5FAE\8F6F\96C5\9ED1,Tahoma,Arial,sans-serif;
+}
+
+/* 微微往上滑入 */
+@-webkit-keyframes layui-upbit{ 
+  from {-webkit-transform: translate3d(0, 30px, 0); opacity: 0.3;}
+  to {-webkit-transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+@keyframes layui-upbit{
+  from {transform: translate3d(0, 30px, 0);  opacity: 0.3;}
+  to {transform: translate3d(0, 0, 0);  opacity: 1;}
+}
+

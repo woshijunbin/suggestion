@@ -1,0 +1,94 @@
+@CHARSET "UTF-8";
+    .searchSelect{    position: relative;}
+    .searchInput{
+        font-family: inherit;
+        font-size: inherit;
+        font-style: inherit;
+        font-weight: inherit;
+        outline: 0;
+        padding-right: 30px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+        padding-left: 10px;
+        height: 38px;
+        line-height: 38px;
+        border: 1px solid #e6e6e6;
+        background-color: #fff;
+        border-radius: 2px;
+        outline: none;
+        -webkit-transition: border-color .3s cubic-bezier(.65,.05,.35,.5);
+        transition: border-color .3s cubic-bezier(.65,.05,.35,.5);
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        box-sizing: border-box !important;
+    }
+    
+    .searchIcon{
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -3px;
+        cursor: pointer;
+        border-width: 6px;
+        border-style: dashed;
+        border-color: transparent;
+        border-top-color: #c2c2c2;
+        border-top-style: solid;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .searchDl{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 42px;
+        padding: 5px 0;
+        z-index: 999;
+        min-width: 100%;
+        border: 1px solid #d2d2d2;
+        max-height: 300px;
+        overflow-y: auto;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 2px 4px rgba(0,0,0,.12);
+        box-sizing: border-box;
+        -webkit-animation-duration: 0.3s;
+        animation-duration: 0.3s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-name: layui-upbit;
+        animation-name: layui-upbit;
+    }
+    
+    .searchDd{
+        cursor: pointer;
+        padding: 0 10px;
+        line-height: 36px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;   
+    }
+    
+    .searchDd:hover{
+        background-color: #f2f2f2; 
+    }
+    
+    .noneItem{
+        margin: 5px 0;
+        text-align: center;
+        color: #999;
+    }
+    
+    .searchShow{
+        display: block;
+    }
+    .searchp{
+        float: right;
+    }
+    
+    .preview{color:#fff !important;background-color: #5FB878 !important;}

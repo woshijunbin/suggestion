@@ -1,0 +1,53 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+
+	<session-factory>
+	
+<!-- 1. mysql数据库连接配置 
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/s1h?useUnicode=true&amp;characterEncoding=utf-8</property>
+		<property name="hibernate.connection.username">root</property>
+		
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		
+-->
+<!-- sql server数据库配置 -->
+ 		<property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+   	 	<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    	<property name="hibernate.connection.url">jdbc:sqlserver://localhost:52071;DatabaseName=lmpt</property>
+ 		<property name="connection.username">sa</property>
+ 		<property name="connection.password">sa</property>
+
+
+<!-- 通用配置 -->
+		<property name="hibernate.connection.autocommit">true</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">false</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		
+		 <!-- 配置c3p0驱动管理类
+		 		  		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		 
+		  -->
+		<property name="hibernate.connection.provider_class">org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.max_size">2</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.timeout">500</property>
+		<property name="hibernate.c3p0.max_statements">100</property>
+		<property name="hibernate.c3p0.idle_test_period">500</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.validate">true</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+<!-- --> 
+		<mapping class="entity.Fypyzd"/>
+
+	</session-factory>
+	
+	
+</hibernate-configuration>
