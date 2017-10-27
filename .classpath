@@ -7,7 +7,6 @@
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/el-api.jar"/>
 	<classpathentry kind="var" path="TOMCAT_HOME/lib/annotations-api.jar"/>
 	<classpathentry kind="src" path="WEB-INF/src"/>
-	<classpathentry kind="src" output="work" path="work"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/antlr-2.7.7.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/bsf-2.3.0.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/c3p0-0.9.1.jar"/>

@@ -11,15 +11,18 @@
 </head>
 <body>
 
-   <div class="layui-inline">
-      <label class="layui-form-label">验证手机</label>
-      <div class="layui-input-inline">
-            <input class="searchInput" name="type3" id="searchInput" autocomplete="off" type="text" placeholder="搜索" value="" > 
-      </div>
-    </div>
+	<!-- 无缝嵌入layui样式 -->
+	<div class="layui-form-item">
+		<div class="layui-inline">
+			<label class="layui-form-label">layui样式</label>
+			<div class="layui-input-inline">
+				<input class="searchInput" name="type3" id="searchInput" autocomplete="off" type="text" placeholder="搜索" value="" > 
+			</div>
+	    </div>
+	</div>
     
     
-    
+    <!--  suggestion标准写法 -->
     <input class="searchInput" name="type3" id="searchInput" autocomplete="off" type="text" placeholder="搜索" value="" > 
     <input class="1" name="type3" id="searchInput" autocomplete="off" type="text" placeholder="搜索" value="" > 
 

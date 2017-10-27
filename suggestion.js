@@ -68,6 +68,7 @@ function suggestion(options){
 
         // input 的值改变事件
         var change = function () {
+        	console.log('change事件')
             var param = {};
             step = 0;
             param[options.key] = $that.val();
@@ -96,17 +97,17 @@ function suggestion(options){
         
         
     }) 
+    
+    
     $(document).on('click',function(e) {
         var 
             that = e.target,
             thatClass = that.getAttribute('class');
         
         $('.searchDl').removeClass('searchShow');
-
         // 点击input 展开-关闭选项面板
         if(thatClass == 'searchInput') {
-            addPreview($('.searchDd:first'))
-            $(that).next('.searchDl').addClass('searchShow');
+        	$(that).next('.searchDl').addClass('searchShow');
         }
 
 
