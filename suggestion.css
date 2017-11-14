@@ -87,6 +87,13 @@
     .searchShow{
         display: block;
     }
+    
+    .searchShow + i.searchIcon{
+        margin-top: -9px;
+	    -webkit-transform: rotate(180deg);
+	    transform: rotate(180deg);
+	    margin-top: -3px\9;
+    }
     .searchp{
         float: right;
     }
