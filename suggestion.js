@@ -1,6 +1,7 @@
 /*
  * 使用请先加载jquery
  * stepFlag 键盘上下键触发时，触发滚动条滚动
+ * ggfdg
  */
 function suggestion(options){
     var step = 0,
