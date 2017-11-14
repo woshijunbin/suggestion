@@ -1,12 +1,17 @@
-/*
+/**
  * 使用请先加载jquery
- * stepFlag 键盘上下键触发时，触发滚动条滚动
- * ggfdg
+ * stepFlag 键盘上下键触发时，触发滚动条滚动 值为当前显示行数-1
+ * options对象属性有：
+ * 		selector：希望渲染的元素选择器
+ * 		url:后台url
+ * 		key:参数名
+ * 		callback: 数据成功返回后的回调函数
  */
 function suggestion(options){
     var step = 0,
         stepFlag =7;  // 滚动条滚动标记。
 
+    // 单行高亮背景
     var addPreview  = function(that) {
         $('.preview').removeClass('preview');
         if(that.constructor == $) {
@@ -14,6 +19,7 @@ function suggestion(options){
         }
     }
 
+    // 获取值。强制传入对象为jquery对象
     var getVal = function(that) {
         return that.constructor == $  && that.data('val') || that.text();
         /*
@@ -23,7 +29,7 @@ function suggestion(options){
         */
     }
     
-    $("input[class='searchInput']").each(function() {
+    $(options.selector).each(function() {
         var $that = $(this),
             $searchSelect = $("<div class='searchSelect'></div>"),
             $searchIcon = $("<i class='searchIcon'></i>"),
