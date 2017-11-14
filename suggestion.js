@@ -1,11 +1,15 @@
-/*
+/**
  * 使用请先加载jquery
- * stepFlag 键盘上下键触发时，触发滚动条滚动
+ * stepFlag 键盘上下键触发时，触发滚动条滚动。值为显示的数据条数-1
+ * 
+ * @param options对象：
+ * selector,url，key,callback
  */
 function suggestion(options){
     var step = 0,
-        stepFlag =7;  // 滚动条滚动标记。
+        stepFlag =7;  
 
+    // 单行高亮显示
     var addPreview  = function(that) {
         $('.preview').removeClass('preview');
         if(that.constructor == $) {
@@ -13,16 +17,22 @@ function suggestion(options){
         }
     }
 
+    /**
+     * 获取值。
+     * 限制传入对象必须是jquery对象
+     */
     var getVal = function(that) {
         return that.constructor == $  && that.data('val') || that.text();
         /*
-                        这么写 永远是return undefined 。 js的分号补全机制做鬼
+                        下面return后换行再写结果都是 undefined 。 js的分号补全机制做鬼
         return 
             that.constructor == $  && that.data('val') || that.text();
         */
     }
     
-    $("input[class='searchInput']").each(function() {
+    
+    
+    $(options.selector).each(function() {
         var $that = $(this),
             $searchSelect = $("<div class='searchSelect'></div>"),
             $searchIcon = $("<i class='searchIcon'></i>"),
